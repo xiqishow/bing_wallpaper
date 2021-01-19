@@ -17,4 +17,4 @@ localpath="/Users/$USER/bing-wallpapers/wallpapler_$file_seed.jpg"
 #设置壁纸
 osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$localpath\""
 #提示壁纸设置成功
-osascript -e "display notification \"壁纸更换成功\" with title \"定时换壁纸\""
+#osascript -e "display notification \"壁纸更换成功\" with title \"定时换壁纸\""
