@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 #创建壁纸目录
+echo $
+if [ $1 = "-n" ]
+then
+    osascript -e "display notification \"开始更换壁纸\" with title \"定时换壁纸\""
+fi
+
 mkdir -p ~/bing-wallpapers/
 cd ~/bing-wallpapers/
 #请求一个随机数(bing只能返回0到7)
@@ -15,6 +21,11 @@ curl $rurl_esult -o wallpapler_$file_seed.jpg
 #设置壁纸路径
 localpath="/Users/$USER/bing-wallpapers/wallpapler_$file_seed.jpg"
 #设置壁纸
-osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$localpath\""
+# osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$localpath\""
+osascript -e "tell application \"System Events\" to set picture of (reference to every desktop) to \"$localpath\""
+
 #提示壁纸设置成功
-#osascript -e "display notification \"壁纸更换成功\" with title \"定时换壁纸\""
+if [ $1 = "-n" ]
+then
+    osascript -e "display notification \"壁纸更换成功\" with title \"定时换壁纸\""
+fi
