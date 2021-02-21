@@ -2,7 +2,7 @@
 
 #创建壁纸目录
 echo $
-if [ $1 = "-n" ]
+if [[ $1 = "-n" ]]
 then
     osascript -e "display notification \"开始更换壁纸\" with title \"定时换壁纸\""
 fi
@@ -25,7 +25,7 @@ localpath="/Users/$USER/bing-wallpapers/wallpapler_$file_seed.jpg"
 osascript -e "tell application \"System Events\" to set picture of (reference to every desktop) to \"$localpath\""
 
 #提示壁纸设置成功
-if [ $1 = "-n" ]
+if [[ $1 = "-n" ]]
 then
     osascript -e "display notification \"壁纸更换成功\" with title \"定时换壁纸\""
 fi
