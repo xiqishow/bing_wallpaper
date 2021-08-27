@@ -17,7 +17,7 @@ rurl_esult="$(curl --location --request GET 'http://www.bing.com/HPImageArchive.
 rm -f wallpapler*.jpg
 #随机文件名，否则无法更换壁纸
 file_seed="$(date +%s)"
-curl $rurl_esult -o wallpapler_$file_seed.jpg
+curl $rurl_esult -o wallpapler_$file_seed.jpg > /dev/null
 #设置壁纸路径
 localpath="/Users/$USER/bing-wallpapers/wallpapler_$file_seed.jpg"
 #设置壁纸
