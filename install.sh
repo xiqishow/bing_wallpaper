@@ -3,8 +3,7 @@
 #设置定时任务，每5分钟
 rm -f cornjob
 cFolder="$(pwd)"
-echo "*/5 * * * * $cFolder/wallpaper.sh >> /tmp/bw.out" >> cornjob
 #设定定时任务
-crontab cornjob
+echo "*/5 * * * * $cFolder/wallpaper.sh  > /dev/null 2>&1" | crontab
 #获得一次壁纸
-./wallpaper.sh  >> /tmp/bw.out
+./wallpaper.sh  >> /dev/null 2>&1
