@@ -6,6 +6,7 @@ Schedule changing MacOS wallpaper from Bing
 install.sh   //安装定时任务  
 wallpaper.sh //设定壁纸  
 uninstall.sh //卸载定时任务，注意默认删除本机的所有定时任务
+
 三个脚本运行权限
 chmod u+x ./install.sh ./wallpaper.sh ./uninstall.sh 
 
