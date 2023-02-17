@@ -1,6 +1,6 @@
 # bing_wallpaper 纯脚本为MacOS随机定时设定Bing壁纸
 Schedule changing MacOS wallpaper from Bing  
-使用Bing壁纸定时随机选择一张图片设定系统壁纸（默认5分钟更换）  
+使用Bing壁纸（UHD清晰度）定时随机选择一张图片设定系统壁纸（默认5分钟更换）  
 
 1、首先赋予  
 install.sh   //安装定时任务  
